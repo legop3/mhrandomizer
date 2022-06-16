@@ -1,17 +1,23 @@
 xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
-
-
-
 const { Client } = require('pg')
 const client = new Client({
   user: 'postgres',
   password: '123'
 })
+
+
+
+
+
+
+
+
+var counter = 1
 client.connect()
 client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
-    console.log(res) // Hello World!
+    console.log(res)
     client.end()
 })
 
@@ -22,7 +28,9 @@ var dbarray = []
 
 
 
-
+function addtodb(itemid) {
+  dbarray.push([10, 4, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
+}
 
 
 
@@ -31,10 +39,14 @@ var gachaarmor = xlsx.parse(`./spreadsheets/Gacha_Armor.xlsx`)
 gachaarmor.forEach(element => {
         console.log('gacha armor')
             for(var i = 0; i < 10; i++){
-                  console.log(element.data[Math.floor(Math.random()*element.data.length)])
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+
             }
 });
-
+console.log(dbarray)
 
 
 
