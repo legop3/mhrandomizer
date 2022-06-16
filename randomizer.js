@@ -25,7 +25,7 @@ var counter = 2
 
 
 client.query('SELECT * FROM normal_shop_items', (err, res) => {
-    console.log(res.rows)
+    console.log(res, err)
 })
 
 
