@@ -2,6 +2,7 @@ xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
 const { Client } = require('pg')
+var json2csv = require('json2csv');
 const client = new Client({
   user: 'postgres',
   password: '123'
@@ -20,7 +21,9 @@ client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
     console.log(res)
 
 })
-client.query('TRUNCTUATE TABLE public.normal_shop_items')
+client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
+  console.log(err, res)
+})
 // const { timeStamp } = require('console');
 // const directoryPath = path.join(__dirname, 'spreadsheets');
 var discordarray = []
