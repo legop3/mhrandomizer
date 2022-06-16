@@ -10,7 +10,7 @@ const client = new Client({
   password: '123'
 })
 client.connect()
-client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
+client.query('SELECT * FROM normal_shop_items', (err, res) => {
   console.log(err ? err.stack : res.rows[0].message) // Hello World!
   client.end()
 })
