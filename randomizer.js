@@ -10,7 +10,7 @@ const client = new Client({
   password: '123'
 })
 client.connect()
-client.query('SELECT * FROM normal_shop_items', (err, res) => {
+client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
     console.log(res) // Hello World!
     client.end()
 })
