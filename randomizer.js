@@ -18,7 +18,7 @@ client.connect()
 var counter = 2
 client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
     console.log(res)
-    client.end()
+
 })
 client.query('TRUNCTUATE TABLE public.normal_shop_items')
 // const { timeStamp } = require('console');
@@ -46,11 +46,12 @@ gachaarmor.forEach(element => {
 
             }
 });
-console.log('abarray' + dbarray)
+console.log('dbarray')
+console.log(dbarray)
 
 
 
-
+client.end()
 
 
 
