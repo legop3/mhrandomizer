@@ -11,8 +11,8 @@ const client = new Client({
 })
 client.connect()
 client.query('SELECT * FROM normal_shop_items', (err, res) => {
-  console.log(err ? err.stack : res.rows[0].message) // Hello World!
-  client.end()
+    console.log(res) // Hello World!
+    client.end()
 })
 
 // const { timeStamp } = require('console');
