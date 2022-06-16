@@ -6,21 +6,21 @@ const client = new Client({
   user: 'postgres',
   password: '123'
 })
-
-
-
-
-
-
-
-
-var counter = 1
 client.connect()
+
+
+
+
+
+
+
+
+var counter = 2
 client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
     console.log(res)
     client.end()
 })
-
+client.query('TRUNCTUATE TABLE public.normal_shop_items')
 // const { timeStamp } = require('console');
 // const directoryPath = path.join(__dirname, 'spreadsheets');
 var discordarray = []
@@ -46,7 +46,10 @@ gachaarmor.forEach(element => {
 
             }
 });
-console.log(dbarray)
+console.log('abarray' + dbarray)
+
+
+
 
 
 
