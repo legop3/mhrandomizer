@@ -29,9 +29,9 @@ client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
 
 
 
-client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
-  console.log(err, res)
-})
+// client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
+//   console.log(err, res)
+// })
 
 
 
