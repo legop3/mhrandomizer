@@ -1,17 +1,22 @@
 xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
-const { Client } = require('pg')
 var json2csv = require('json2csv');
-const client = new Client({
-  user: 'postgres',
-  password: '123',
-  database: 'erpue',
-  port: 5432,
-  host: 'localhost'
-})
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'postgres',
+  password : '123'
+});
 
-client.connect()
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+ 
+  console.log('connected as id ' + connection.threadId);
+});
 
 
 
@@ -22,11 +27,6 @@ client.connect()
 
 var counter = 2
 
-
-
-client.query('SELECT * FROM normal_shop_items', (err, res) => {
-    console.log(res, err)
-})
 
 
 
@@ -69,7 +69,6 @@ console.log(dbarray)
 
 
 
-client.end()
 
 
 
