@@ -6,8 +6,11 @@ var json2csv = require('json2csv');
 const client = new Client({
   user: 'postgres',
   password: '123',
-  database: 'erpue'
+  database: 'erpue',
+  port: 5432,
+  host: 'localhost'
 })
+
 client.connect()
 
 
@@ -21,8 +24,8 @@ var counter = 2
 
 
 
-client.query('SELECT * FROM public.normal_shop_items', (err, res) => {
-    console.log(res)
+client.query('SELECT * FROM normal_shop_items', (err, res) => {
+    console.log(res.rows)
 })
 
 
