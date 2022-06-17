@@ -90,7 +90,7 @@ fs.writeFile('out.csv', out, (err) => {
 })
 
 
-client.query("\\copy normal_shop_items FROM '/home/brody/mhrandomizer/out.csv' DELIMITER ',' CSV", (err, res) => {
+client.query("\copy normal_shop_items FROM '/home/brody/mhrandomizer/out.csv' DELIMITER ',' CSV", (err, res) => {
   console.log(err, res)
 })
 
