@@ -75,7 +75,8 @@ var csv = new ObjectsToCsv(dbarray)
 
 
 
-console.log(csv.toString('./out.csv', { header: false }))
+var out = csv.toString('./out.csv', { header: false })
+console.log(out)
 
 
 
