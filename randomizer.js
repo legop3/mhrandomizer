@@ -28,7 +28,7 @@ client.connect()
 // })
 
 
-var out
+
 var counter = 2
 
 
@@ -72,18 +72,23 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-async function printCsv(dbarray) {
-  console.log(
-    await new ObjectsToCsv(dbarray).toString(header=false)
-  );
+// async function printCsv(dbarray) {
+//   // console.log(
+//   //   await new ObjectsToCsv(dbarray).toString(header=false)
+//   // );
 
 
-    out = await new ObjectsToCsv(dbarray).toString(header=false)
+//     var out = await new ObjectsToCsv(dbarray).toString(header=false)
+    
+// //fijkolsydnofl7iyuasdon;lyfuaoisyfdnoiysfdoiyaoiyhe[oiryum[oaevium[opreuv[rpuew[pvruwo[ivru9ow83ern9o8yw9qa8r4yvp9tr8u49ptun98rut09ur0[tu-rtret[]wr[et][wre]t[w]re[t]wre[t]wer[t]w[ert]wre[t]we[rt]w[ert]er[t]]]]]]]]
+// }
+// printCsv(dbarray);
 
 
-}
-printCsv(dbarray);
-console.log(out)
+(async () => {
+  var out = await new ObjectsToCsv(dbarray).toString(header=false)
+  console.log(out)
+})
 
 
 // new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
