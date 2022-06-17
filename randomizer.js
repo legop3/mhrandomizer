@@ -71,7 +71,7 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-console.log(ObjectsToCsv(dbarray))
+console.log(new ObjectsToCsv(dbarray))
 
 
 
