@@ -71,8 +71,8 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-console.log(new ObjectsToCsv(dbarray))
-
+var csv = new ObjectsToCsv(dbarray)
+csv.toDisk('./out.csv')
 
 
 
