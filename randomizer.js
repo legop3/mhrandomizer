@@ -73,7 +73,7 @@ console.log(dbarray)
 
 const out = convertArrayToCSV(dbarray)
 console.log(out)
-
+fs.writeFile('out.csv', out)
 
 
 
