@@ -23,7 +23,7 @@ client.connect()
 
 
 
-// var counter = 2
+var counter = 2
 
 
 
