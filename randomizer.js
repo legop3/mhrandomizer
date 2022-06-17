@@ -71,12 +71,11 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-var csv = new ObjectsToCsv(dbarray)
-
-
-
-var out = csv.toString('./out.csv', { header: false })
-console.log(out)
+async function printCsv(dbarray) {
+  console.log(
+    await new ObjectsToCsv(dbarray).toString()
+  );
+}
 
 
 
