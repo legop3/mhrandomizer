@@ -3,7 +3,8 @@ const path = require('path');
 const fs = require('fs');
 // const converter = require('json2csv');
 const { Pool, Client } = require('pg')
-const ObjectsToCsv = require('objects-to-csv')
+const ObjectsToCsv = require('objects-to-csv');
+
 
 
 
@@ -73,7 +74,7 @@ console.log(dbarray)
 
 async function printCsv(dbarray) {
   console.log(
-    await new ObjectsToCsv(dbarray).toString()
+    await new ObjectsToCsv(dbarray).toString(header=false)
   );
 }
 printCsv(dbarray);
