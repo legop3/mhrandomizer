@@ -21,10 +21,10 @@ client.connect()
 
 
 
-//empty the table////////////////////////////////////////////////
-// client.query('TRUNCATE normal_shop_items', (err, res) => {
-//   console.log(err, res)
-// })
+////empty the table////////////////////////////////////////////////
+client.query('TRUNCATE normal_shop_items', (err, res) => {
+  console.log(err, res)
+})
 
 
 
@@ -35,9 +35,9 @@ var counter = 2
 
 
 
-client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
-  console.log(err, res)
-})
+// client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
+//   console.log(err, res)
+// })
 
 
 
