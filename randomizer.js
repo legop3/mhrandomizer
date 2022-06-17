@@ -35,9 +35,9 @@ var counter = 2
 
 
 
-// // client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
-// //   console.log(err, res)
-// // })
+client.query('TRUNCTUATE TABLE normal_shop_items', (err, res) => {
+  console.log(err, res)
+})
 
 
 
@@ -48,7 +48,7 @@ var discordarray = []
 var dbarray = []
 
 
-
+ 
 function addtodb(itemid) {
   dbarray.push([10, 4, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
 }
@@ -64,9 +64,21 @@ gachaarmor.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
-
             }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log('dbarray')
 console.log(dbarray)
 
@@ -77,6 +89,10 @@ fs.writeFile('out.csv', out, (err) => {
   console.log(err)
 })
 
+
+client.query("\\copy normal_shop_items FROM '/home/brody/mhrandomizer/out.csv' DELIMITER ',' CSV", (err, res) => {
+  console.log(err, res)
+})
 
 
 
