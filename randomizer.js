@@ -83,7 +83,7 @@ async function printCsv(dbarray) {
 
 }
 printCsv(dbarray);
-print(out)
+console.log(out)
 
 
 // new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
