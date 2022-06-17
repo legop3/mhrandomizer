@@ -1,9 +1,8 @@
 xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
-// const converter = require('json2csv');
 const { Pool, Client } = require('pg')
-const ObjectsToCsv = require('objects-to-csv');
+const csv = convertArrayToCSV(data, options);
 
 
 
@@ -71,6 +70,12 @@ gachaarmor.forEach(element => {
 console.log('dbarray')
 console.log(dbarray)
 
+console.log(csv(dbarray))
+
+
+
+
+
 
 // async function printCsv(dbarray) {
 //   // console.log(
@@ -85,10 +90,10 @@ console.log(dbarray)
 // printCsv(dbarray);
 
 
-(async () => {
-  var out = await new ObjectsToCsv(dbarray).toString(header=false)
-  await console.log(out)
-})
+// (async () => {
+//   var out = await new ObjectsToCsv(dbarray).toString(header=false)
+//   await console.log(out)
+// })
 
 
 // new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
