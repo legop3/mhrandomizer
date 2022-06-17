@@ -13,7 +13,9 @@ const client = new Client({
 })
 client.connect()
 
-
+client.query('SELECT * from normal_shop_items', (err, res) => {
+  console.log(err, res)
+})
 
 
 
