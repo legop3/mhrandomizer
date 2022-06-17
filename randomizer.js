@@ -72,15 +72,21 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-// async function printCsv(dbarray) {
-//   console.log(
-//     await new ObjectsToCsv(dbarray).toString(header=false)
-//   );
-// }
-// printCsv(dbarray);
+async function printCsv(dbarray) {
+  console.log(
+    await new ObjectsToCsv(dbarray).toString(header=false)
+  );
 
 
-new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
+    out = await new ObjectsToCsv(dbarray).toString(header=false)
+
+
+}
+printCsv(dbarray);
+print(out)
+
+
+// new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
 
 
 
