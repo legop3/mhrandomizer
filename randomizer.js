@@ -72,7 +72,11 @@ console.log(dbarray)
 
 
 var csv = new ObjectsToCsv(dbarray)
-csv.toDisk('./out.csv', { header: false })
+
+
+
+console.log(csv.toString('./out.csv', { header: false }))
+
 
 
 
