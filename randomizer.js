@@ -1,8 +1,13 @@
 xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
-const converter = require('json2csv');
+// const converter = require('json2csv');
 const { Pool, Client } = require('pg')
+const ObjectsToCsv = require('objects-to-csv')
+
+
+
+
 
 const client = new Client({
   user: 'postgres',
@@ -65,10 +70,8 @@ gachaarmor.forEach(element => {
 console.log('dbarray')
 console.log(dbarray)
 
-converter.json2csv(dbarray, (err, csv) => {
-  console.log(err, csv)
-})
 
+console.log(ObjectsToCsv(dbarray))
 
 
 
