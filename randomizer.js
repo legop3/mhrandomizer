@@ -72,20 +72,20 @@ console.log('dbarray')
 console.log(dbarray)
 
 
-async function printCsv(dbarray) {
-  console.log(
-    await new ObjectsToCsv(dbarray).toString(header=false)
-  );
-}
+// async function printCsv(dbarray) {
+//   console.log(
+//     await new ObjectsToCsv(dbarray).toString(header=false)
+//   );
+// }
 
 
 
-printCsv(dbarray);
+// printCsv(dbarray);
 
 
+new ObjectsToCsv(dbarray).toDisk('./out.csv', header=false);
 
-var output = new ObjectsToCsv(dbarray).toString(header=false)
-console.log(output)
+
 
     // for(var i = 0; i < 9; i++){
     //     console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
