@@ -77,13 +77,10 @@ console.log(dbarray)
 //     await new ObjectsToCsv(dbarray).toString(header=false)
 //   );
 // }
-
-
-
 // printCsv(dbarray);
 
 
-new ObjectsToCsv(dbarray).toDisk('./out.csv', header=false);
+new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
 
 
 
