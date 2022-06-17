@@ -2,11 +2,16 @@ xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
 var json2csv = require('json2csv');
+const { Pool, Client } = require('pg')
 
-const { Client } = require('pg')
-const client = new Client()
+const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'erupe',
+  password: '123',
+  port: 5432,
+})
 client.connect()
-
 
 
 
