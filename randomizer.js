@@ -2,24 +2,10 @@ xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
 var json2csv = require('json2csv');
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'postgres',
-  password : '123',
-  port: '5432'
-});
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('error connecting: ' + err.stack);
-    return;
-  }
- 
-  console.log('connected as id ' + connection.threadId);
-});
-
-
+const { Client } = require('pg')
+const client = new Client()
+client.connect()
 
 
 
