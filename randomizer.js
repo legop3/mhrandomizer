@@ -76,7 +76,7 @@ async function printCsv(dbarray) {
     await new ObjectsToCsv(dbarray).toString()
   );
 }
-printCsv(sampleData);
+printCsv(dbarray);
 
 
 
