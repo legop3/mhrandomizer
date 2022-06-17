@@ -2,8 +2,8 @@ xlsx = require('node-xlsx').default;
 const path = require('path');
 const fs = require('fs');
 const { Pool, Client } = require('pg')
-const csv = convertArrayToCSV(data, options);
-
+const { convertArrayToCSV } = require('convert-array-to-csv');
+const converter = require('convert-array-to-csv');
 
 
 
@@ -70,7 +70,8 @@ gachaarmor.forEach(element => {
 console.log('dbarray')
 console.log(dbarray)
 
-console.log(csv(dbarray))
+
+const out = convertArrayToCSV(dbarray)
 
 
 
