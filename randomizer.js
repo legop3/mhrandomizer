@@ -87,7 +87,7 @@ console.log(dbarray)
 
 (async () => {
   var out = await new ObjectsToCsv(dbarray).toString(header=false)
-  console.log(out)
+  await console.log(out)
 })
 
 
