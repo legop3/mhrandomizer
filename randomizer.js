@@ -6,7 +6,8 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'postgres',
-  password : '123'
+  password : '123',
+  port: '5432'
 });
 
 connection.connect(function(err) {
