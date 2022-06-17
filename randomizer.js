@@ -77,9 +77,15 @@ async function printCsv(dbarray) {
     await new ObjectsToCsv(dbarray).toString(header=false)
   );
 }
+
+
+
 printCsv(dbarray);
 
 
+
+var output = new ObjectsToCsv(dbarray).toString(header=false)
+console.log(output)
 
     // for(var i = 0; i < 9; i++){
     //     console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
