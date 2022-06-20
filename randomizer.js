@@ -207,7 +207,7 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
 
 
 
-console.log(process.env)
+console.log(process.env.TOKEN)
 
 
 
