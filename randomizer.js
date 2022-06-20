@@ -85,14 +85,17 @@ console.log(dbarray)
 
 const out = convertArrayToCSV(dbarray)
 console.log(out)
-fs.writeFile('/lib/mhf/out.csv', out, (err) => {
+fs.writeFile('/tmp/out.csv', out, (err) => {
   console.log(err)
 })
 
 
-client.query("copy normal_shop_items FROM '/home/brody/mhrandomizer/out.csv' WITH CSV", (err, res) => {
+client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   console.log(err, res)
 })
+
+
+
 
 
 
