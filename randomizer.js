@@ -199,12 +199,13 @@ fs.writeFile('/tmp/out.csv', out, (err) => {
 
 client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   console.log(err, res)
+  client.end()
 })
 
 
 
 
-client.end()
+
 
 
 
