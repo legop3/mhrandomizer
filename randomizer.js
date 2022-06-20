@@ -5,9 +5,7 @@ const { Pool, Client } = require('pg')
 const { convertArrayToCSV } = require('convert-array-to-csv');
 const converter = require('convert-array-to-csv');
 
-const discord = require('discord.js');
 
-const bot = new discord.Client({ intents: [Intents.FLAGS.GUILDS] })
 
 
 const client = new Client({
