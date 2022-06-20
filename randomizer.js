@@ -72,7 +72,7 @@ gachaarmor.forEach(element => {
 var gachabowguns = xlsx.parse(`./spreadsheets/Gacha_Bowguns.xlsx`)
 gachabowguns.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 5; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
@@ -84,7 +84,7 @@ gachabowguns.forEach(element => {
 var gachaweps = xlsx.parse(`./spreadsheets/Gacha_Weps.xlsx`)
 gachaweps.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 25; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
@@ -120,7 +120,7 @@ otherbowguns.forEach(element => {
 var otherweps = xlsx.parse(`./spreadsheets/Other_Weps.xlsx`)
 otherweps.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 25; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
@@ -132,7 +132,7 @@ otherweps.forEach(element => {
 var premarmor = xlsx.parse(`./spreadsheets/Prem_Armor.xlsx`)
 premarmor.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 30; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
@@ -144,7 +144,7 @@ premarmor.forEach(element => {
 var prembowguns = xlsx.parse(`./spreadsheets/Prem_Bowguns.xlsx`)
 prembowguns.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 25; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
@@ -156,7 +156,7 @@ prembowguns.forEach(element => {
 var premweps = xlsx.parse(`./spreadsheets/Prem_Weps.xlsx`)
 premweps.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
+            for(var i = 0; i < 20; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
