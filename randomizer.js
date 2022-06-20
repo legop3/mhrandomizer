@@ -165,16 +165,16 @@ premweps.forEach(element => {
 });
 
 //remaining mats
-var remainingmats = xlsx.parse(`./spreadsheets/Remaining_mats.xlsx`)
-remainingmats.forEach(element => {
-        console.log('gacha armor')
-            for(var i = 0; i < 10; i++){
-                  var item = element.data[Math.floor(Math.random()*element.data.length)]
-                  console.log(item)
-                  itemid = item[2]
-                  addtodb(itemid)
-            }
-});
+// var remainingmats = xlsx.parse(`./spreadsheets/Remaining_mats.xlsx`)
+// remainingmats.forEach(element => {
+//         console.log('gacha armor')
+//             for(var i = 0; i < 10; i++){
+//                   var item = element.data[Math.floor(Math.random()*element.data.length)]
+//                   console.log(item)
+//                   itemid = item[2]
+//                   addtodb(itemid)
+//             }
+// });
 
 
 console.log('dbarray')
