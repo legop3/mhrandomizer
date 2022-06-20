@@ -25,7 +25,7 @@ client.connect()
 
 
 ///schedule the evrything to do it
-cron.schedule('* * * * *', () => {
+// cron.schedule('* * * * *', () => {
   
 
 
@@ -210,7 +210,7 @@ client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) =
 
 
 
-});
+// });
 
 
 
