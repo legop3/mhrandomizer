@@ -4,7 +4,9 @@ const fs = require('fs');
 const { Pool, Client } = require('pg')
 const { convertArrayToCSV } = require('convert-array-to-csv');
 const converter = require('convert-array-to-csv');
+const { Client, Intents } = require('discord.js');
 
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 
 
@@ -22,7 +24,9 @@ sql.connect()
 
 ///schedule the evrything to do it
 
-  
+client.once('ready', () => {
+	console.log('Ready!');
+});
 
 
 
@@ -207,7 +211,7 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
 
 
 
-console.log(process.env.TOKEN)
+client.login(process.env.TOKEN)
 
 
 
