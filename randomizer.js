@@ -50,10 +50,10 @@ var dbarray = []
 
  
 function addtodb(itemid) {
-  dbarray.push([10, 4, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
+  dbarray.push([10, 8, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
 }
 
-  dbarray.push([10, 4, 1, 5755, 25, 50, 0, 0, 1, 1, 0, 1, 5, 0])
+  dbarray.push([10, 8, 1, 5755, 25, 50, 0, 0, 1, 1, 0, 1, 5, 0])
 
 
 //gacha armor
@@ -68,16 +68,113 @@ gachaarmor.forEach(element => {
             }
 });
 
+//gacha bowguns
+var gachabowguns = xlsx.parse(`./spreadsheets/Gacha_Bowguns.xlsx`)
+gachabowguns.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//gacha weps
+var gachaweps = xlsx.parse(`./spreadsheets/Gacha_Weps.xlsx`)
+gachaweps.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//other armor
+var otherarmor = xlsx.parse(`./spreadsheets/Other_Armor.xlsx`)
+otherarmor.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//other bowguns
+var otherbowguns = xlsx.parse(`./spreadsheets/Other_Bowguns.xlsx`)
+otherbowguns.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//other weps
+var otherweps = xlsx.parse(`./spreadsheets/Other_Weps.xlsx`)
+otherweps.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//prem armor
+var premarmor = xlsx.parse(`./spreadsheets/Prem_Armor.xlsx`)
+premarmor.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//prem bowguns
+var prembowguns = xlsx.parse(`./spreadsheets/Prem_Bowguns.xlsx`)
+prembowguns.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
+//prem weps
+var premweps = xlsx.parse(`./spreadsheets/Prem_Weps.xlsx`)
+premweps.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
-
-
+//remaining mats
+var remainingmats = xlsx.parse(`./spreadsheets/Remaining_mats.xlsx`)
+remainingmats.forEach(element => {
+        console.log('gacha armor')
+            for(var i = 0; i < 10; i++){
+                  var item = element.data[Math.floor(Math.random()*element.data.length)]
+                  console.log(item)
+                  itemid = item[2]
+                  addtodb(itemid)
+            }
+});
 
 
 console.log('dbarray')
