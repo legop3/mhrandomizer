@@ -8,14 +8,14 @@ const converter = require('convert-array-to-csv');
 
 
 
-const client = new Client({
+const sql = new Client({
   user: 'postgres',
   host: 'localhost',
   database: 'erupe',
   password: '123',
   port: 5432,
 })
-client.connect()
+sql.connect()
 
 
 
@@ -27,7 +27,7 @@ client.connect()
 
 
 ////empty the table////////////////////////////////////////////////
-client.query('TRUNCATE normal_shop_items', (err, res) => {
+sql.query('TRUNCATE normal_shop_items', (err, res) => {
   console.log(err, res)
 })
 
@@ -193,9 +193,9 @@ fs.writeFile('/tmp/out.csv', out, (err) => {
 })
 
 
-client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
+sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   console.log(err, res)
-  client.end()
+  sql.end()
 })
 
 
