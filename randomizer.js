@@ -57,7 +57,7 @@ var dbarray = []
 
 
 function addtodiscord(japname, engname) {
-      discordarray.push({name: engname, value: japname})
+      discordarray.push({name: japname, value: engname})
 }
 
  
