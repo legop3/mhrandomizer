@@ -4,10 +4,10 @@ const fs = require('fs');
 const { Pool, Client } = require('pg')
 const { convertArrayToCSV } = require('convert-array-to-csv');
 const converter = require('convert-array-to-csv');
-var cron = require('node-cron');
 
+const discord = require('discord.js');
 
-
+const bot = new discord.Client({ intents: [Intents.FLAGS.GUILDS] })
 
 
 const client = new Client({
@@ -18,8 +18,6 @@ const client = new Client({
   port: 5432,
 })
 client.connect()
-
-
 
 
 
@@ -211,7 +209,7 @@ client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) =
 
 
 
-
+console.log(process.env)
 
 
 
