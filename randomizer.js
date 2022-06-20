@@ -55,6 +55,11 @@ var discordarray = []
 var dbarray = []
 
 
+
+function addtodiscord(japname, engname) {
+      discordarray.push({name: engname, value: japname})
+}
+
  
 function addtodb(itemid) {
   dbarray.push([10, 8, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
@@ -72,6 +77,9 @@ gachaarmor.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -201,7 +209,7 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
 })
 
 
-
+console.log(discordarray)
 
 
 
