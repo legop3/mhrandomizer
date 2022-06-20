@@ -92,6 +92,9 @@ gachabowguns.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -104,6 +107,9 @@ gachaweps.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -116,6 +122,9 @@ otherarmor.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -128,6 +137,9 @@ otherbowguns.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -140,6 +152,9 @@ otherweps.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -152,6 +167,9 @@ premarmor.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -164,6 +182,9 @@ prembowguns.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
@@ -176,6 +197,9 @@ premweps.forEach(element => {
                   console.log(item)
                   itemid = item[2]
                   addtodb(itemid)
+                  engname = item[1]
+                  japname = item[0]
+                  addtodiscord(japname, engname)
             }
 });
 
