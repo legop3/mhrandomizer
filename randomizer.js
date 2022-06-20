@@ -57,7 +57,15 @@ var dbarray = []
 
 
 function addtodiscord(japname, engname) {
-      discordarray.push({name: japname, value: engname})
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray.push({name: engname, value: japname})
 }
 
  
