@@ -236,7 +236,7 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
 console.log(discordarray)
 
 
-fs.writeFile('./discord.json', JSON.stringify(discordarray))
+fs.writeFile('./discord.json', JSON.stringify(discordarray), function(err){if(err){console.error(err)}})
 
 
 
