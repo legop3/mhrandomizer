@@ -4,6 +4,7 @@ const fs = require('fs');
 const { Pool, Client } = require('pg')
 const { convertArrayToCSV } = require('convert-array-to-csv');
 const converter = require('convert-array-to-csv');
+var cron = require('node-cron');
 
 
 
@@ -18,6 +19,14 @@ const client = new Client({
 })
 client.connect()
 
+
+
+
+
+
+///schedule the evrything to do it
+cron.schedule('* * * * *', () => {
+  
 
 
 
@@ -191,6 +200,26 @@ fs.writeFile('/tmp/out.csv', out, (err) => {
 client.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   console.log(err, res)
 })
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
 
 
 
