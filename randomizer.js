@@ -24,9 +24,7 @@ sql.connect()
 
 ///schedule the evrything to do it
 
-client.once('ready', () => {
-	console.log('Ready!');
-});
+
 
 
 
