@@ -411,7 +411,7 @@ fs.writeFile('/home/brody/mhrandomizer/discord9.json', JSON.stringify(discordarr
 
 
 
-client.login(process.env.TOKEN)
+//client.login(process.env.TOKEN)
 
 
 
@@ -427,32 +427,32 @@ client.login(process.env.TOKEN)
 
 
 
- async function printCsv(dbarray) {
-    console.log(
-      await new ObjectsToCsv(dbarray).toString(header=false)
-    );
+//  async function printCsv(dbarray) {
+//     console.log(
+//       await new ObjectsToCsv(dbarray).toString(header=false)
+//     );
 
 
-     var out = await new ObjectsToCsv(dbarray).toString(header=false)
+//      var out = await new ObjectsToCsv(dbarray).toString(header=false)
     
-// //fijkolsydnofl7iyuasdon;lyfuaoisyfdnoiysfdoiyaoiyhe[oiryum[oaevium[opreuv[rpuew[pvruwo[ivru9ow83ern9o8yw9qa8r4yvp9tr8u49ptun98rut09ur0[tu-rtret[]wr[et][wre]t[w]re[t]wre[t]wer[t]w[ert]wre[t]we[rt]w[ert]er[t]]]]]]]]
- }
- printCsv(dbarray);
+// // //fijkolsydnofl7iyuasdon;lyfuaoisyfdnoiysfdoiyaoiyhe[oiryum[oaevium[opreuv[rpuew[pvruwo[ivru9ow83ern9o8yw9qa8r4yvp9tr8u49ptun98rut09ur0[tu-rtret[]wr[et][wre]t[w]re[t]wre[t]wer[t]w[ert]wre[t]we[rt]w[ert]er[t]]]]]]]]
+//  }
+//  printCsv(dbarray);
 
 
-  (async () => {
-   var out = await new ObjectsToCsv(dbarray).toString(header=false)
-   await console.log(out)
- })
+//   (async () => {
+//    var out = await new ObjectsToCsv(dbarray).toString(header=false)
+//    await console.log(out)
+//  })
 
 
- new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
+//  new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
 
 
 
-     for(var i = 0; i < 9; i++){
-         console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
-     }
+//      for(var i = 0; i < 9; i++){
+//          console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
+//      }
 
  
 
@@ -464,65 +464,65 @@ client.login(process.env.TOKEN)
 
 
 
- fs.readdir(directoryPath, function (err, files) {
-     //handling error
-     if (err) {
-         return console.log('Unable to scan directory: ' + err);
-     } 
-     //listing all files using forEach
-     files.forEach(function (file) {
-         // Do whatever you want to do with the file
-          console.log(file); 
-     });
- });
+// //  fs.readdir(directoryPath, function (err, files) {
+//      //handling error
+//      if (err) {
+//          return console.log('Unable to scan directory: ' + err);
+//      } 
+//      //listing all files using forEach
+//      files.forEach(function (file) {
+//          // Do whatever you want to do with the file
+//           console.log(file); 
+//      });
+//  });
 
- const getAllFiles = function(dirPath, arrayOfFiles) {
-     files = fs.readdirSync(dirPath)
+//  const getAllFiles = function(dirPath, arrayOfFiles) {
+//      files = fs.readdirSync(dirPath)
   
-     arrayOfFiles = arrayOfFiles || []
+//      arrayOfFiles = arrayOfFiles || []
   
-     files.forEach(function(file) {
-       if (fs.statSync(dirPath + "/" + file).isDirectory()) {
-         arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles)
-       } else {
-         arrayOfFiles.push(path.join(__dirname, dirPath, "/", file))
-       }
-     })
+//      files.forEach(function(file) {
+//        if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+//          arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles)
+//        } else {
+//          arrayOfFiles.push(path.join(__dirname, dirPath, "/", file))
+//        }
+//      })
     
-     return arrayOfFiles
-   }
+//      return arrayOfFiles
+//    }
 
 
 
 
- console.log(getAllFiles("spreadsheets"))
+//  console.log(getAllFiles("spreadsheets"))
 
- getAllFiles("spreadsheets").forEach(element => {
-     console.log('wa')
-      console.log(element)
-     const sheetopen = xlsx.parse(element)
- sheetopen.forEach(element => {
-   console.log(element)
+//  getAllFiles("spreadsheets").forEach(element => {
+//      console.log('wa')
+//       console.log(element)
+//      const sheetopen = xlsx.parse(element)
+//  sheetopen.forEach(element => {
+//    console.log(element)
 
-      console.log(element)
-      element.data.forEach(element => {
-          console.log(element)
-          console.log('waw')
-      })
+//       console.log(element)
+//       element.data.forEach(element => {
+//           console.log(element)
+//           console.log('waw')
+//       })
 
-     for(var i = 0; i < 9; i++){
-         console.log(element.data[Math.floor(Math.random()*element.data.length)][2])
+//      for(var i = 0; i < 9; i++){
+//          console.log(element.data[Math.floor(Math.random()*element.data.length)][2])
         
-     }
+//      }
 
 
 
 
 
 
- })
+ //})
 
   
 
- })
+ //})
 
