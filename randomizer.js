@@ -51,7 +51,15 @@ var counter = 2
 
 // // const { timeStamp } = require('console');
 // // const directoryPath = path.join(__dirname, 'spreadsheets');
-var discordarray = []
+var discordarray1 = []
+var discordarray2 = []
+var discordarray3 = []
+var discordarray4 = []
+var discordarray5 = []
+var discordarray6 = []
+var discordarray7 = []
+var discordarray8 = []
+var discordarray9 = []
 var dbarray = []
 
 
@@ -65,8 +73,114 @@ function addtodiscord(japname, engname) {
             japname = 'missing name'
       }
 
-      discordarray.push({name: engname, value: japname})
+      discordarray1.push({name: engname, value: japname})
 }
+
+
+function addtodiscord2(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray2.push({name: engname, value: japname})
+}
+
+
+function addtodiscord3(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray3.push({name: engname, value: japname})
+}
+
+
+function addtodiscord4(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray4.push({name: engname, value: japname})
+}
+
+
+function addtodiscord5(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray5.push({name: engname, value: japname})
+}
+
+
+function addtodiscord6(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray6.push({name: engname, value: japname})
+}
+
+
+function addtodiscord7(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray7.push({name: engname, value: japname})
+}
+
+
+function addtodiscord8(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray8.push({name: engname, value: japname})
+}
+
+
+function addtodiscord9(japname, engname) {
+      if(!engname) {
+            engname = 'missing name'
+      }
+
+      if(!japname) {
+            japname = 'missing name'
+      }
+
+      discordarray9.push({name: engname, value: japname})
+
+}
+
 
  
 function addtodb(itemid) {
@@ -102,7 +216,7 @@ gachabowguns.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord2(japname, engname)
             }
 });
 
@@ -117,7 +231,7 @@ gachaweps.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord3(japname, engname)
             }
 });
 
@@ -132,7 +246,7 @@ otherarmor.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord4(japname, engname)
             }
 });
 
@@ -147,7 +261,7 @@ otherbowguns.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord5(japname, engname)
             }
 });
 
@@ -162,7 +276,7 @@ otherweps.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord6(japname, engname)
             }
 });
 
@@ -177,7 +291,7 @@ premarmor.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord7(japname, engname)
             }
 });
 
@@ -192,7 +306,7 @@ prembowguns.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord8(japname, engname)
             }
 });
 
@@ -207,7 +321,7 @@ premweps.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord9(japname, engname)
             }
 });
 
@@ -240,16 +354,64 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   sql.end()
 })
 
+fs.unlinkSync('/home/brody/mhrandomizer/discord.json')
 
-console.log(discordarray)
+fs.unlinkSync('/home/brody/mhrandomizer/discord2.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord3.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord4.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord5.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord6.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord7.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord8.json') 
+
+fs.unlinkSync('/home/brody/mhrandomizer/discord9.json')  
+
+console.log(discordarray1)
+
+fs.writeFile('/home/brody/mhrandomizer/discord.json', JSON.stringify(discordarray1), function(err){if(err){console.error(err)}})
+
+console.log(discordarray2)
+
+fs.writeFile('/home/brody/mhrandomizer/discord2.json', JSON.stringify(discordarray2), function(err){if(err){console.error(err)}})
+
+console.log(discordarray3)
+
+fs.writeFile('/home/brody/mhrandomizer/discord3.json', JSON.stringify(discordarray3), function(err){if(err){console.error(err)}})
+
+console.log(discordarray4)
+
+fs.writeFile('/home/brody/mhrandomizer/discord4.json', JSON.stringify(discordarray4), function(err){if(err){console.error(err)}})
+
+console.log(discordarray5)
+
+fs.writeFile('/home/brody/mhrandomizer/discord5.json', JSON.stringify(discordarray5), function(err){if(err){console.error(err)}})
+
+console.log(discordarray6)
+
+fs.writeFile('/home/brody/mhrandomizer/discord6.json', JSON.stringify(discordarray6), function(err){if(err){console.error(err)}})
+
+console.log(discordarray7)
+
+fs.writeFile('/home/brody/mhrandomizer/discord7.json', JSON.stringify(discordarray7), function(err){if(err){console.error(err)}})
+
+console.log(discordarray8)
+
+fs.writeFile('/home/brody/mhrandomizer/discord8.json', JSON.stringify(discordarray8), function(err){if(err){console.error(err)}})
+
+console.log(discordarray9)
+
+fs.writeFile('/home/brody/mhrandomizer/discord9.json', JSON.stringify(discordarray9), function(err){if(err){console.error(err)}})
 
 
-fs.writeFile('./discord.json', JSON.stringify(discordarray), function(err){if(err){console.error(err)}})
 
 
-
-
-// client.login(process.env.TOKEN)
+client.login(process.env.TOKEN)
 
 
 
@@ -265,32 +427,32 @@ fs.writeFile('./discord.json', JSON.stringify(discordarray), function(err){if(er
 
 
 
-// async function printCsv(dbarray) {
-//   // console.log(
-//   //   await new ObjectsToCsv(dbarray).toString(header=false)
-//   // );
+ async function printCsv(dbarray) {
+    console.log(
+      await new ObjectsToCsv(dbarray).toString(header=false)
+    );
 
 
-//     var out = await new ObjectsToCsv(dbarray).toString(header=false)
+     var out = await new ObjectsToCsv(dbarray).toString(header=false)
     
 // //fijkolsydnofl7iyuasdon;lyfuaoisyfdnoiysfdoiyaoiyhe[oiryum[oaevium[opreuv[rpuew[pvruwo[ivru9ow83ern9o8yw9qa8r4yvp9tr8u49ptun98rut09ur0[tu-rtret[]wr[et][wre]t[w]re[t]wre[t]wer[t]w[ert]wre[t]we[rt]w[ert]er[t]]]]]]]]
-// }
-// printCsv(dbarray);
+ }
+ printCsv(dbarray);
 
 
-// (async () => {
-//   var out = await new ObjectsToCsv(dbarray).toString(header=false)
-//   await console.log(out)
-// })
+  (async () => {
+   var out = await new ObjectsToCsv(dbarray).toString(header=false)
+   await console.log(out)
+ })
 
 
-// new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
+ new ObjectsToCsv(dbarray).toDisk('./out.csv', { Header:false });
 
 
 
-    // for(var i = 0; i < 9; i++){
-    //     console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
-    // }
+     for(var i = 0; i < 9; i++){
+         console.log(gachaarmor.data[Math.floor(Math.random()*gachaarmor.data.length)][2]) 
+     }
 
  
 
@@ -302,65 +464,65 @@ fs.writeFile('./discord.json', JSON.stringify(discordarray), function(err){if(er
 
 
 
-// fs.readdir(directoryPath, function (err, files) {
-//     //handling error
-//     if (err) {
-//         return console.log('Unable to scan directory: ' + err);
-//     } 
-//     //listing all files using forEach
-//     files.forEach(function (file) {
-//         // Do whatever you want to do with the file
-//         // console.log(file); 
-//     });
-// });
+ fs.readdir(directoryPath, function (err, files) {
+     //handling error
+     if (err) {
+         return console.log('Unable to scan directory: ' + err);
+     } 
+     //listing all files using forEach
+     files.forEach(function (file) {
+         // Do whatever you want to do with the file
+          console.log(file); 
+     });
+ });
 
-// const getAllFiles = function(dirPath, arrayOfFiles) {
-//     files = fs.readdirSync(dirPath)
+ const getAllFiles = function(dirPath, arrayOfFiles) {
+     files = fs.readdirSync(dirPath)
   
-//     arrayOfFiles = arrayOfFiles || []
+     arrayOfFiles = arrayOfFiles || []
   
-//     files.forEach(function(file) {
-//       if (fs.statSync(dirPath + "/" + file).isDirectory()) {
-//         arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles)
-//       } else {
-//         arrayOfFiles.push(path.join(__dirname, dirPath, "/", file))
-//       }
-//     })
+     files.forEach(function(file) {
+       if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+         arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles)
+       } else {
+         arrayOfFiles.push(path.join(__dirname, dirPath, "/", file))
+       }
+     })
     
-//     return arrayOfFiles
-//   }
+     return arrayOfFiles
+   }
 
 
 
 
-// console.log(getAllFiles("spreadsheets"))
+ console.log(getAllFiles("spreadsheets"))
 
-// getAllFiles("spreadsheets").forEach(element => {
-//     console.log('wa')
-//     // console.log(element)
-//     const sheetopen = xlsx.parse(element)
-// sheetopen.forEach(element => {
-//   console.log(element)
+ getAllFiles("spreadsheets").forEach(element => {
+     console.log('wa')
+      console.log(element)
+     const sheetopen = xlsx.parse(element)
+ sheetopen.forEach(element => {
+   console.log(element)
 
-//     // console.log(element)
-//     // element.data.forEach(element => {
-//     //     console.log(element)
-//     //     console.log('waw')
-//     // })
+      console.log(element)
+      element.data.forEach(element => {
+          console.log(element)
+          console.log('waw')
+      })
 
-//     for(var i = 0; i < 9; i++){
-//         console.log(element.data[Math.floor(Math.random()*element.data.length)][2])
+     for(var i = 0; i < 9; i++){
+         console.log(element.data[Math.floor(Math.random()*element.data.length)][2])
         
-//     }
-
-
-//poop
+     }
 
 
 
-// })
+
+
+
+ })
 
   
 
-// })
+ })
 
