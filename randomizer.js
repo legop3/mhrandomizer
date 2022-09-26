@@ -195,7 +195,7 @@ function addtodb(itemid) {
 var gachaarmor = xlsx.parse(`./spreadsheets/Gacha_Armor.xlsx`)
 gachaarmor.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 5; i++){
+            for(var i = 0; i < 10; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
