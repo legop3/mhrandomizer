@@ -284,7 +284,7 @@ otherweps.forEach(element => {
 var premarmor = xlsx.parse(`./spreadsheets/Prem_Armor.xlsx`)
 premarmor.forEach(element => {
         console.log('gacha armor')
-            for(var i = 0; i < 25; i++){
+            for(var i = 0; i < 30; i++){
                   var item = element.data[Math.floor(Math.random()*element.data.length)]
                   console.log(item)
                   itemid = item[2]
