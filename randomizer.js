@@ -64,7 +64,7 @@ var dbarray = []
 
 
 
-function addtodiscord(japname, engname) {
+function addtodiscord1(japname, engname) {
       if(!engname) {
             engname = 'missing name'
       }
@@ -201,7 +201,7 @@ gachaarmor.forEach(element => {
                   addtodb(itemid)
                   engname = item[1]
                   japname = item[0]
-                  addtodiscord(japname, engname)
+                  addtodiscord1(japname, engname)
             }
 });
 
