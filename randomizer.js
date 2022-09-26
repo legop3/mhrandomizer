@@ -354,7 +354,7 @@ sql.query("copy normal_shop_items FROM '/tmp/out.csv' WITH CSV", (err, res) => {
   sql.end()
 })
 
-fs.unlinkSync('/home/brody/mhrandomizer/discord.json')
+fs.unlinkSync('/home/brody/mhrandomizer/discord1.json')
 
 fs.unlinkSync('/home/brody/mhrandomizer/discord2.json') 
 
@@ -374,7 +374,7 @@ fs.unlinkSync('/home/brody/mhrandomizer/discord9.json')
 
 console.log(discordarray1)
 
-fs.writeFile('/home/brody/mhrandomizer/discord.json', JSON.stringify(discordarray1), function(err){if(err){console.error(err)}})
+fs.writeFile('/home/brody/mhrandomizer/discord1.json', JSON.stringify(discordarray1), function(err){if(err){console.error(err)}})
 
 console.log(discordarray2)
 
