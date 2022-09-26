@@ -186,10 +186,10 @@ function addtodiscord9(japname, engname) {
  
 function addtodb(itemid) {
   dbarray.push([10, 8, counter++, itemid, 1000, 1, 0, 0, 1, 1, 0, 1, 40, 0])
-}
+
 
   dbarray.push([10, 8, 1, 5755, 25, 50, 0, 0, 1, 1, 0, 1, 5, 0])
-
+}
 
 //gacha armor
 var gachaarmor = xlsx.parse(`./spreadsheets/Gacha_Armor.xlsx`)
